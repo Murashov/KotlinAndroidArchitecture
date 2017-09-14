@@ -1,0 +1,46 @@
+buildscript {
+    ext.kotlin_version = '1.1.4-3'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0-beta5'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "io.realm:realm-gradle-plugin:3.7.0"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    //Common
+    rxKotlinVersion = '2.1.0'
+    javaxAnnotationVersion = '1.0'
+    javaxInjectVersion = '1'
+    juintVersion = '4.12'
+    supportTestRunnerVersion = '1.0.1'
+    espressoVersion = '3.0.1'
+
+    //Presentation
+    supportLibraryVersion = '26.0.2'
+    rxAndroidVersion = '2.0.1'
+    daggerVersion = '2.11'
+    leakCanaryVersion = '1.5'
+    lifecycleExtensionsVersion = '1.0.0-alpha9'
+    ciceroneVersion = '2.1.0'
+
+    //Data
+    retrofitVersion = '2.2.0'
+    retrofitRxJavaAdapterVersion = '1.0.0'
+    picassoVersion = '2.5.2'
+}
